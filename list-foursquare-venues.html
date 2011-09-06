@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>CoderTests | List Foursquare Venues</title>
+<link rel="Stylesheet" href="libs/bootstrap-1.1.0.min.css" />
+</head>
+<body>
+<div class="container">
+<h1>List Foursquare Venues</h1>
+<p>Foursquare is insanely popular these days. The <a href="https://developer.foursquare.com/venues/">venues project developer site</a> outlines code to GET a json object containing values in brooklyn. The request is like so (when using curl):</p>
+<p><code>curl "https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=CLIENT_ID&client_secret=CLIENT_SECRET"</code></p>
+<p>Sign up for a <a href="https://foursquare.com/oauth/">foursquare developer oauth account</a> and print out a list of the venus returned using the url specified above.</p>
+<p>Use jQuery's <code>$.ajax</code> to get the data, and attach the print function to the button below.</p>
+    <input type="button" class="btn large primary" id="btnList" value="list venues" />
+</div>
+
+
+<script src="libs/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //$.ajax here......
+
+    });
+</script>
+</body>
+</html>
