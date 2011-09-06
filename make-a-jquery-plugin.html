@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>CoderTests | Make a jQuery Plugin</title>
+<link rel="Stylesheet" href="libs/bootstrap-1.1.0.min.css" />
+</head>
+<body>
+<div class="container">
+<h1>Make a jQuery Plugin</h1>
+<p>Please combine the <code>MakeItemGreen()</code> and <code>MakeItemBigger()</code> functions into a jQuery plugin, so that the code <code>$("#box").hulkify()</code> produces the same result as calling the functions one after the other.</p>
+    <div id="box" style="width:200px;height:200px;background-color:#ddd;">
+        <p>i'm content in a box</p>
+    </div>
+    <br />
+    <input type="button" class="btn large primary" id="btnHulkify" value="hulkify!" />
+</div>
+
+
+<script src="libs/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+    ///
+    ///     this function accepts a jquery object and makes its background color green
+    ///
+    function MakeItemGreen(item) {
+        $(item).css({backgroundColor:"green"});
+
+    }
+    ///
+    ///     this function accepts a jquery object and makes the item bigger
+    ///
+    function MakeItemBigger(item){
+        $(item).css({width:"+=100px",height:"+=100px"});
+    }
+    ///
+    ///     document.ready
+    ///
+    $(function () {
+        //
+        //      replace the code inside this bind to .hulkify
+        //
+        $('#btnHulkify').bind("click", function () {
+            var $item = $("#box");
+            MakeItemBigger($item);
+            MakeItemGreen($item);
+        });
+    });
+</script>
+</body>
+</html>
