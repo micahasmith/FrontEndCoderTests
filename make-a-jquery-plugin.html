@@ -7,6 +7,8 @@
 <div class="container">
 <h1>Make a jQuery Plugin</h1>
 <p>Please combine the <code>MakeItemGreen()</code> and <code>MakeItemBigger()</code> functions into a jQuery plugin, so that the code <code>$("#box").hulkify()</code> produces the same result as calling the functions one after the other.</p>
+<p>Once the plugin is created, please replace the contents of the <code>$('#btnHulkify').bind("click"</code> function so that they call <code>$item.hulkify()</code> instead of the two functions.</p>
+<p><strong>Note:</strong><em> the plugin must be chainable.</em> So <code>$.hulkify().hide('slow')</code> must be working code.</p>
     <div id="box" style="width:200px;height:200px;background-color:#ddd;">
         <p>i'm content in a box</p>
     </div>
