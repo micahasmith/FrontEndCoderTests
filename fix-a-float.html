@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>CoderTests | Use a Templating Language</title>
+<link rel="Stylesheet" href="libs/bootstrap-1.1.0.min.css" />
+</head>
+<body>
+<div class="container">
+<h1>Floats</h1>
+<p>On this page there is a div with the id of main. This div contains two floated columns with unknown heights. Edit the HTML and/or CSS so that the height of #main is equal to the height of the tallest column it contains. Bonus points if you don't edit the HTML.</p>
+
+</div>
+
+<div id="main">
+	<div class="columnOne">
+		Column One
+	</div>
+	<div class="columnTwo">
+		Column Two
+	</div>
+</div> 
+
+<style>
+
+	#main{
+		background-color:yellow;
+		width:1000px;
+		margin:10px auto;
+	}
+		
+	.columnOne{
+		height:100px;
+		width:498px;
+		float:left;
+		color:red;
+		border:1px solid red;
+	}
+	
+	.columnTwo{
+		height:100px;
+		width:498px;
+		float:left;
+		color:blue;
+		border:1px solid blue;
+	}
+	
+</style>
+
+<script src="libs/jquery-1.6.2.min.js"></script>
+<script type="text/javascript">
+    
+    $(function () {
+        $(".columnOne").animate({height:Math.random() * 500 + 20}, function(){
+			$(".columnTwo").animate({height:Math.random() * 500 + 20});
+		});
+    });
+
+</script>
+</body>
+</html>
